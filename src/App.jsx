@@ -1,16 +1,16 @@
 import React from 'react'
 import './App.css'
-import Test from './Test'
-import { Demo } from './Demo'
-
+import MyRoutes from './MyRoutes'
+import Nav from './Nav'
 
 const App = () => {
   return (
-    <div className='App'>
-        <Test/>
-        <Demo/>
-    </div>
+    <>
+      <Nav/>
+      <MyRoutes/>
+    </>
   )
 }
 
 export default App
+

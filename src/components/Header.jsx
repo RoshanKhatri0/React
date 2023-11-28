@@ -53,9 +53,9 @@ const Header = () => {
             </form>
 
             <div className="text-end">
-              <button type="button" className="btn btn-outline-light me-2">
+              <Link to='/login' type="button" className="btn btn-outline-light me-2">
                 Login
-              </button>
+              </Link>
               <button type="button" className="btn btn-warning">
                 Sign-up
               </button>

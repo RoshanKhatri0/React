@@ -1,13 +1,18 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Test from './Test'
+
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
 
 const MyRoutes = () => {
   return (
     <>
     <Router>
         <Routes>
-            <Route path='/test' element={<Test/>}></Route>
+            {/* <Route path='/' element={<Start/>}></Route> */}
+          <Route path='' element={<Layout/>}>
+            <Route index element={<HomePage/>}/>
+          </Route>
         </Routes>
     </Router>
     </>

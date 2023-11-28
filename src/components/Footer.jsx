@@ -129,10 +129,10 @@ const Footer = () => {
                 <Link className="link-body-emphasis" to="#"><i className="fa-brands fa-bounce fa-facebook fa-2xl text-primary" ></i></Link>
               </li>
               <li className="ms-3">
-                <Link className="link-body-emphasis" to="#"><i className="fa-brands fa-facebook"></i></Link>
+                <Link className="link-body-emphasis" to="#"><i className="fa-brands fa-bounce fa-twitter fa-2xl "></i></Link>
               </li>
               <li className="ms-3">
-                <Link className="link-body-emphasis" to="#"><i className="fa-brands fa-facebook"></i></Link>
+                <Link className="link-body-emphasis" to="#"><i className="fa-brands fa-bounce fa-youtube fa-2xl text-danger"></i></Link>
               </li>
             </ul>
           </div>

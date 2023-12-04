@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <header className="p-3 text-dark bg-dark">
+      <header className="p-3 text-dark bg-dark sticky-top">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <Link
@@ -40,17 +40,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <form
-              className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
-              role="search"
-            >
-              <input
-                type="search"
-                className="form-control form-control-dark text-bg-dark"
-                placeholder="Search..."
-                aria-label="Search"
-              />
-            </form>
+            
 
             <div className="text-end">
               <Link to='/login' type="button" className="btn btn-outline-light me-2">
@@ -59,7 +49,9 @@ const Header = () => {
               <Link to='/signup' type="button" className="btn btn-warning">
                 Sign-up
               </Link>
+              
             </div>
+            <i className="fa-solid fa-cart-shopping text-white fa-xl mx-4"></i>
           </div>
         </div>
       </header>

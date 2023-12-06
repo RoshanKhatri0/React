@@ -27,9 +27,13 @@ const SignUp = () => {
                             Remember me
                         </label>
                     </div>
-                    <Link to='/' className="btn btn-primary w-100 py-2" type="submit">Sign UP</Link>
+                    <div className="d-flex justify-content-center align-item-center">
+                    <Link to='/' className="btn btn-primary w-50 py-2" type="submit">Sign Up</Link>
+                    </div>
                     <p className="mt-5 mb-3 text-body-secondary">Already have an account,</p>
-                    <Link to='/login' className="btn btn-primary w-100 py-2" type="submit">Login</Link>
+                    <div className="d-flex justify-content-center align-item-center">
+                    <Link to='/login' className="btn btn-primary w-50 py-2" type="submit">Login In</Link>
+                    </div>
                     <p className="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
                 </form>
             </main>

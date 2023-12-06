@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     return (
@@ -27,11 +29,16 @@ const Login = () => {
                             Remember me
                         </label>
                     </div>
-                    <Link to='/' className="btn btn-primary w-100 py-2" type="submit">Login</Link>
+                    <div className="d-flex justify-content-center align-item-center">
+                    {/* <ToastContainer position='top-right' theme='colored'/> */}
+                    <Link to='/' className="btn btn-primary w-50 py-2 " type="submit" 
+                    // onClick={()=>{toast.success('Login In Successfull') }}
+                    >Login</Link>
+                    </div>
                     <p className="mt-5 mb-3 text-body-secondary">Don't have an account,</p>
-
-                    <Link to='/signup' className="btn btn-primary w-100 py-2" type="submit">Sign Up</Link>
-
+                    <div className="d-flex justify-content-center align-item-center">
+                    <Link to='/signup' className="btn btn-primary w-50 py-2" type="submit">Sign Up</Link>
+                    </div>
                     <p className="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
                 </form>
             </main>

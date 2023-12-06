@@ -14,7 +14,7 @@ const ProductDetail = () => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
         .then(res=>setProduct(res.data))
         .catch(err=>console.log(err))
-    },[])
+    },[params.product_id])
 
     const addToCart=()=>{
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []
@@ -52,7 +52,7 @@ const ProductDetail = () => {
                     <h1>{product.title}</h1>
                     <h2 className='text-secondary'>Category: {product.category}</h2>
                     <p className='text-secondary'><strong>Description:</strong> {product.description}</p>
-                    {/* <p>Rating: {product.rating.rate}</p> */}
+                    <p className='text-secondary'>Rating: {product.rating && product.rating.rate}</p>
                     <Link to='#' className="btn btn-outline-danger" onClick={addToCart}>Add to Cart</Link>
 
                 </div>

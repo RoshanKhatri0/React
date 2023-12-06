@@ -39,8 +39,7 @@ const Card = (props) => {
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">Rs {price}</p>
-        <ToastContainer position='top-right' theme='colored'/>
-                            
+                            <ToastContainer position='top-right' theme='colored'/>
                             <Link to={`/productdetail/${id}`} className="btn btn-outline-info">View Details</Link>
                             <Link to='#' className="btn btn-outline-danger mx-3" onClick={addToCart}>Add to Cart</Link>
 

@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import ProductDetail from './pages/ProductDetail'
 import Products from './pages/Products'
+import Cart from './pages/Cart'
 
 const MyRoutes = () => {
   return (
@@ -18,6 +19,8 @@ const MyRoutes = () => {
             <Route index element={<HomePage/>}/>
             <Route path='productdetail/:product_id' element={<ProductDetail/>}/>
             <Route path='products' element={<Products/>}/>
+            <Route path='cart' element={<Cart/>}/>
+
 
           </Route>
           <Route path='login' element={<Login/>}/>

@@ -48,7 +48,9 @@ const Header = () => {
               </Link>
               
             </div>
+            <Link to='/cart'>
             <i className="fa-solid fa-cart-shopping text-white fa-xl mx-4"></i>
+            </Link>
           </div>
         </div>
       </header>

@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import ProductDetail from './pages/ProductDetail'
+import Products from './pages/Products'
 
 const MyRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const MyRoutes = () => {
           <Route path='' element={<Layout/>}>
             <Route index element={<HomePage/>}/>
             <Route path='productdetail/:product_id' element={<ProductDetail/>}/>
+            <Route path='products' element={<Products/>}/>
 
           </Route>
           <Route path='login' element={<Login/>}/>

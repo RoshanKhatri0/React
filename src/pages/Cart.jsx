@@ -3,10 +3,23 @@ import { Fragment } from 'react'
 
 const Cart = () => {
     const [products, setProducts] = useState([])
+    
     useEffect(()=>{
         const cartData = JSON.parse(localStorage.getItem('cartItems'))
         setProducts(cartData)
     },[])
+
+    const updateQuantity=(index, action)=>{
+        const updatedProduct = [...products]
+        if(action === 'increase'){
+            updatedProduct[index].quantity++
+            setProducts(updatedProduct)
+        }
+        else if (action === 'decrease' && updatedProduct[index].quantity > 1){
+            updatedProduct[index].quantity--
+            setProducts(updatedProduct)
+        }
+    }
   return (
     <>
         <div className="container">
@@ -35,7 +48,12 @@ const Cart = () => {
                                                 </div>
                                                 <div className="col-3">{item.title}</div>
                                                 <div className="col-3 text-warning">Rs{item.price}</div>
-                                                <div className="col-2">{item.quantity}</div>
+                                                <div className="col-2 d-flex align-items-center justify-content-center">
+                                                        <i class="fa-solid fa-plus mx-3" onClick={()=>{updateQuantity(i,'increase')}}></i>
+                                                        <p className="border border-dark p-1 m-0">{item.quantity}</p>
+                                                        <i class="fa-solid fa-minus mx-3 " onClick={()=>{updateQuantity(i,'decrease')}}></i>
+                                                    
+                                                </div>
                                                 <div className="col-2">
                                                     <button className="btn btn-danger">Delete</button>
                                                 </div>

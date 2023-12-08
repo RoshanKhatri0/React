@@ -30,6 +30,10 @@ const Card = (props) => {
             toast.success(`${productItems.title} is succesfully added to cart`)
         }
     }
+    const deleteItem = (index) => {
+        const updatedProducts = products.filter((_, i) => i !== index);
+        setProducts(updatedProducts);
+    };
     
     return (
         <>
@@ -40,8 +44,8 @@ const Card = (props) => {
                             <h5 className="card-title">{title}</h5>
                             <p className="card-text">Rs {price}</p>
                             <ToastContainer position='top-right' theme='colored'/>
-                            <Link to={`/productdetail/${id}`} className="btn btn-outline-info">View Details</Link>
-                            <Link to='#' className="btn btn-outline-danger mx-3" onClick={addToCart}>Add to Cart</Link>
+                            <Link to='#' className="btn btn-outline-danger " onClick={addToCart}>Add to Cart</Link>
+                            <Link to={`/productdetail/${id}`} className=' d-flex align-item-center justify-content-end' ><i class="fa-solid fa-circle-info fa-xl mx-2"></i></Link>
 
                         </div>
                     </div>

@@ -30,15 +30,12 @@ const Card = (props) => {
             toast.success(`${productItems.title} is succesfully added to cart`)
         }
     }
-    const deleteItem = (index) => {
-        const updatedProducts = products.filter((_, i) => i !== index);
-        setProducts(updatedProducts);
-    };
+    
     
     return (
         <>
                 <div className="col">
-                    <div className="card">
+                    <div className="card py-1">
                         <img src={image} className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">{title}</h5>

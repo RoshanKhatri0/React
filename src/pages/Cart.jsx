@@ -20,6 +20,10 @@ const Cart = () => {
             setProducts(updatedProduct)
         }
     }
+    const deleteItem = (index) => {
+        const updatedProducts = products.filter((_, i) => i !== index);
+        setProducts(updatedProducts);
+    };
   return (
     <>
         <div className="container">
@@ -55,7 +59,7 @@ const Cart = () => {
                                                     
                                                 </div>
                                                 <div className="col-2">
-                                                    <button className="btn btn-danger">Delete</button>
+                                                    <button className="btn btn-danger" onClick={()=>deleteItem(i)}>Delete</button>
                                                 </div>
                                             </div><hr />
                                         </Fragment>

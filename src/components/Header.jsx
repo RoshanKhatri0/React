@@ -22,12 +22,12 @@ const Header = () => {
               </li>
               <li>
                 <Link to="#" className="nav-link px-2 text-white">
-                  Pricing
+                  My Orders
                 </Link>
               </li>
               <li>
                 <Link to="#" className="nav-link px-2 text-white">
-                  FAQs
+                  Payments
                 </Link>
               </li>
               <li>

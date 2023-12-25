@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Fragment } from 'react'
 
+
 const Cart = () => {
     const [products, setProducts] = useState([])
     
@@ -19,10 +20,13 @@ const Cart = () => {
             updatedProduct[index].quantity--
             setProducts(updatedProduct)
         }
+        
+        localStorage.setItem('cartItems',JSON.stringify(updatedProduct))
     }
     const deleteItem = (index) => {
         const updatedProducts = products.filter((_, i) => i !== index);
         setProducts(updatedProducts);
+        localStorage.setItem('cartItems',JSON.stringify(updatedProducts))
     };
   return (
     <>

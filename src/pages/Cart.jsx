@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Fragment } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+
 
 
 const Cart = () => {
@@ -23,13 +25,19 @@ const Cart = () => {
         
         localStorage.setItem('cartItems',JSON.stringify(updatedProduct))
     }
-    const deleteItem = (index) => {
-        const updatedProducts = products.filter((_, i) => i !== index);
+    const deleteItem = (index,name) => {
+        const confirm = window.confirm("Are you sure you want to delete this item from cart?")
+        if(confirm){
+            const updatedProducts = products.filter((_, i) => i !== index);
         setProducts(updatedProducts);
         localStorage.setItem('cartItems',JSON.stringify(updatedProducts))
+        toast.success(`${name} is removed from cart`)
+        }
+        
     };
   return (
     <>
+    <ToastContainer/>
         <div className="container">
             <div className="row d-flex justigy-content-evenly my-4">
                 {
@@ -63,7 +71,7 @@ const Cart = () => {
                                                     
                                                 </div>
                                                 <div className="col-2">
-                                                    <button className="btn btn-danger" onClick={()=>deleteItem(i)}>Delete</button>
+                                                    <button className="btn btn-danger" onClick={()=>deleteItem(i,item.title)}>Delete</button>
                                                 </div>
                                             </div><hr />
                                         </Fragment>

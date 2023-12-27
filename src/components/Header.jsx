@@ -21,8 +21,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="nav-link px-2 text-white">
-                  My Orders
+                <Link to="show" className="nav-link px-2 text-white">
+                  Show
                 </Link>
               </li>
               <li>

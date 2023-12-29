@@ -10,6 +10,7 @@ import Products from './pages/Products'
 import Cart from './pages/Cart'
 import Show from './context/Show'
 import DataCounter from './hook/DataCounter'
+import TestNav from './redux/TestNav'
 
 const MyRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const MyRoutes = () => {
             <Route path='cart' element={<Cart/>}/>
             <Route path='show' element={<Show/>}/>
             <Route path='hooks/reducer' element={<DataCounter/>}/>
+            <Route path='redux/first' element={<TestNav/>}/>
 
 
 

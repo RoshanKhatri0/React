@@ -1,5 +1,5 @@
 const initialState={
-    student_name:'Deepak'
+    student_name:'Roshan Khatri'
 }
 
 const studentReducer =(state=initialState,action)=>{

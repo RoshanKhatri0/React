@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux'
 import TestItem from './reducers/TestItem'
 import Student from './Student'
 import Form from './Form'
+import ItemProduct from './ItemProduct'
+
+
 
 const TestNav = () => {
     const data = useSelector(store=>store.cart)
@@ -12,6 +15,7 @@ const TestNav = () => {
         <TestItem/>
         <Student/>
         <Form/>
+        <ItemProduct/>
     </>
   )
 }
